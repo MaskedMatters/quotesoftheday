@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Daily Inspiration</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="card">
+                <div class="date-display" id="date-display">Loading Date...</div>
+                
+                <div class="quote-content">
+                    <p class="quote-text" id="quote">Loading inspiration...</p>
+                    <p class="author" id="author"></p>
+                </div>
+
+                <div class="footer">
+                    <div class="nav-buttons">
+                        <button id="prev-btn" onclick="changeDay(-1)">← Previous</button>
+                        <button id="next-btn" onclick="changeDay(1)">Next →</button>
+                    </div>
+                    <span class="refresh-hint">New quote daily at 8:00 AM EST</span>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

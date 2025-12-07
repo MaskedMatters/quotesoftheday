@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    /* Soft gradient background */
+    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+.container {
+    padding: 20px;
+    width: 100%;
+    max-width: 650px;
+}
+
+.card {
+    /* Glassmorphism Effect */
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 24px;
+    padding: 50px 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.date-display {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.quote-content {
+    min-height: 150px; /* Prevents jumping when quote length changes */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.quote-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    line-height: 1.4;
+    color: #2d3748;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.author {
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.author::before {
+    content: "— ";
+}
+
+.footer {
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding-top: 25px;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+button {
+    background: transparent;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    color: #555;
+    transition: all 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+    background: #333;
+    color: #fff;
+    border-color: #333;
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    border-color: #e0e0e0;
+}
+
+.refresh-hint {
+    font-size: 0.75rem;
+    color: #999;
+}
+
+@media (max-width: 480px) {
+    .quote-text {
+        font-size: 1.5rem;
+    }
+    .card {
+        padding: 30px 20px;
+    }
+}
