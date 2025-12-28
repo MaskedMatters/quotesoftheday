@@ -13,7 +13,7 @@ const alarms = [
 	},
 	{
 		grade: "7th Grade",
-		year: "2023-3024",
+		year: "2023-2024",
 		items: [
 			{
 				title: "Anticipation & Excitement",
